@@ -356,7 +356,7 @@ Http::FilterDataStatus JsonTranscoderFilter::encodeData(Buffer::Instance& data, 
     // Buffer until the response is complete.
     return Http::FilterDataStatus::StopIterationAndBuffer;
   }
-
+  // how to : parse into Httpbody proto message
   for (auto& frame : frames) {
     Buffer::OwnedImpl temp;
     temp.add(&frame.flags_, 1);
